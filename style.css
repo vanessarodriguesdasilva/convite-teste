@@ -1,4 +1,3 @@
-/* ==================== FUNDO ==================== */
 body {
     margin: 0;
     padding: 0;
@@ -9,22 +8,86 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.info1{
-    display: none;
+/* ==================== IMAGEM EMBAIXO DA CARTA ==================== */
+.info2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    right: 3%;
+    z-index: 7;
+    top: 70%;
+}
+
+.info2 img {
+    width: 30%; /* ajuste fino */
+    height: auto;
+}
+
+/* ==================== IMAGEM NA DIREITA EM CIMA ==================== */
+.info1 {
+    align-items: flex-end;
+    justify-content: flex-end;    
+    position: absolute;
+    display: flex;
+    top: 5%;
+    right: 3%;
+    z-index: 7;
+}
+
+.info1 img {
+    width: 35%;
+    height: auto;
+}
+
+/* ==================== AJUSTES PARA CELULAR ====================*/
+@media (max-width: 900px) {
+
+    .info1 img {
+        width: 70%;   /* maior no celular */
+    }
+
+    .info2 {
+        top: 56%;
+        right: 2%;
+    }
+
+    .info2 img {
+        width: 50%;   /* ajusta proporcionalmente */
+    }
 }
 
 /* ==================== CARTA ==================== */
 .carta {
+    position: absolute;        /* fixa no centro da tela */
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
-    position: relative;
-    z-index: 5;
+    transition: 0.3s;
 }
+
+.carta:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.carta img {
+    max-width: 60%;
+    height: auto;
+    z-index: 6;
+}
+
 
 .carta img {
     display: block;
@@ -50,17 +113,17 @@ body {
         overflow-x: hidden !important;
     }
 
-    .carta {
-        height: auto;
-        min-height: 100vh;
+    .carta{
+        left: 45%;
     }
 
     .carta img {
         max-width: 115%;
         width: 115%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    }
+
+    .carta:hover {
+        transform: translate(-50%, -50%) scale(1.05);
     }
 
     .fundo-brilho img {
