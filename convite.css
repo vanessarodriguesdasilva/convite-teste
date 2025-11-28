@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("teste.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fundo-brilho {
+    background-image: url("tela-inicial.png");
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: 0;   /* <<< IMPORTANTE */
+}
+
+/* TÍTULO */
+.titulo-container {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    z-index: 10;  /* <<< acima do fundo */
+}
+
+
+@media (max-width: 900px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+    .fundo-brilho {
+        opacity: 0.2;
+    }
+}
+
+.img-convite {
+    width: 70%;
+    height: auto;
+    z-index: 21 ;
+}
+
+/* =================== MOBILE ==================== */
+@media (max-width: 900px) {
+
+    .titulo-container {
+        margin-top: 1px;
+    }
+
+    .img-convite {
+        width: 100%;
+        height: auto;
+        z-index: 21 ;
+    }
+}

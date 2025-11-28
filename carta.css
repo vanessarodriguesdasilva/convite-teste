@@ -60,13 +60,12 @@ body {
     }
 
     .info2 img {
-        width: 50%;   /* ajusta proporcionalmente */
+        width: 50%; 
     }
 }
 
-/* ==================== CARTA ==================== */
 .carta {
-    position: absolute;        /* fixa no centro da tela */
+    position: absolute; 
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
@@ -137,3 +136,7 @@ body {
         object-fit: cover;
     }
 }
+
+
+
+
