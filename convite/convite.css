@@ -22,17 +22,15 @@ body {
     top: 0;
     left: 0;
     opacity: 0.4;
-    z-index: 0;   /* <<< IMPORTANTE */
+    z-index: 0; 
 }
 
-/* TÍTULO */
 .titulo-container {
     position: absolute;
     top: 1%;
     left: 2%;
-    z-index: 10;  /* <<< acima do fundo */
+    z-index: 10; 
 }
-
 
 @media (max-width: 900px) {
 
