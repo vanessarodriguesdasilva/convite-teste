@@ -1,0 +1,76 @@
+/* ==================== FUNDO ==================== */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("teste.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.info1{
+    display: none;
+}
+
+/* ==================== CARTA ==================== */
+.carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.carta img {
+    display: block;
+    z-index: 6;
+    max-width: 60%;
+    height: auto;
+}
+
+/* ==================== FUNDO BRILHOS ==================== */
+.fundo-brilho img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media (max-width: 900px) {
+
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+    .carta {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .carta img {
+        max-width: 115%;
+        width: 115%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .fundo-brilho img {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
