@@ -62,3 +62,14 @@ body {
         z-index: 21 ;
     }
 }
+
+.minha-foto {
+    bottom: 25%;
+    right: 5%;
+    z-index: 15;
+}
+
+.img-foto {
+    max-width: 1000px;
+    height: auto;
+}
